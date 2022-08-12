@@ -1,0 +1,19 @@
+.TimeBox {
+	display: flex;
+	align-items: center;
+	> .Box {
+		border: 2px solid black;
+		height: 100px;
+		width: 70px;
+		margin-right: 10px;
+	}
+}
+
+.TextContainer {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	> p {
+		font-size: 30px;
+	}
+}

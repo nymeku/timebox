@@ -1,0 +1,28 @@
+.PrioContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    >p{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+}
+
+.InputsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.PrioInput{
+    resize: none;
+    outline: none;
+    outline-style: none;
+    height: 35px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 0px 0px 10px;
+}

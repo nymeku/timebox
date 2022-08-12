@@ -1,0 +1,25 @@
+* {
+	// outline: 1px solid red;
+}
+.Layout {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	background-color: #fafafa;
+}
+
+.LeftContainer {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 26px 47px;
+}
+
+.RightContainer {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
