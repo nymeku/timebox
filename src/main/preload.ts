@@ -1,4 +1,5 @@
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
+import type { DataType, SaveFile } from '../types';
 
 export type Channels = 'ipc-example';
 
@@ -16,6 +17,14 @@ contextBridge.exposeInMainWorld('electron', {
     },
     once(channel: Channels, func: (...args: unknown[]) => void) {
       ipcRenderer.once(channel, (_event, ...args) => func(...args));
+    },
+  },
+  SaveService: {
+    async save(file: SaveFile, data: DataType) {
+      await ipcRenderer.invoke('save-data', file, data);
+    },
+    load(file: SaveFile) {
+      return ipcRenderer.invoke('load-data', file);
     },
   },
 });
